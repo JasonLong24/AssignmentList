@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: tan;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: tan;">
+        <items>
+          <Button mnemonicParsing="false" onAction="#handleButton" text="Add" />
+            <Button mnemonicParsing="false" onAction="#removeList" text="Delete" />
+        </items>
+      </ToolBar>
+      <ListView fx:id="assignmentList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: tan;" />
+   </children>
+</VBox>
