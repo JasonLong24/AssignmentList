@@ -18,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
@@ -35,16 +36,25 @@ public class MainController implements Initializable{
 	
 	public static ObservableList<String> returnList() {
 		return(list);
-	}
+	}	
 	
 	@FXML
 	public void handleButton(ActionEvent event) throws IOException {
-		System.out.println("BUTTON PRESSED");
+	
+		Parent modalParent = FXMLLoader.load(getClass().getResource("Modal.fxml"));
+		Stage stage = new Stage();
+		stage.setScene(new Scene(modalParent));
+		stage.setResizable(false);
+		stage.alwaysOnTopProperty();
+		stage.show();
+		System.out.println(stage.getOnHiding());
+		
+		/*System.out.println("BUTTON PRESSED");
 		Parent modalParent = FXMLLoader.load(getClass().getResource("Modal.fxml"));
 		Scene modalScene = new Scene(modalParent);
 		Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		appStage.setScene(modalScene);
-		appStage.show();
+		appStage.show();*/
 	}
 	
 	@FXML

@@ -21,18 +21,27 @@ public class ModalController implements Initializable{
 	private TextField addItem;
 	@FXML
 	private Button btnBack;
+	@FXML
+	private Button cancelBtn;
 	ObservableList<String> list = MainController.returnList();
 	
 	@FXML
 	public void addItem(ActionEvent event) throws IOException{
 		list.add(addItem.getText());
 		System.out.println("Assignment Added");
+		((Node)(event.getSource())).getScene().getWindow().hide();
 		
-		Parent mainControl = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		
+		/*Parent mainControl = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		Scene mainScene = new Scene(mainControl);
 		Stage mainStage = (Stage) ((Node) event.getSource()).getScene().getWindow();		
 		mainStage.setScene(mainScene);
-		mainStage.show();
+		mainStage.show();*/
+	}
+	
+	@FXML
+	public void cancelAdd(ActionEvent event) {
+		((Node)(event.getSource())).getScene().getWindow().hide();
 	}
 
 	@Override
