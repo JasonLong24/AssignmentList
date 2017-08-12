@@ -28,15 +28,22 @@ public class MainController implements Initializable{
 	@FXML
 	private ListView<String> assignmentList;
 	@FXML
+	private ListView<String> assignmentTime;
+	@FXML
 	private Button myButton;
 	@FXML
 	private AnchorPane rootPane;
 	
 	private static ObservableList<String> list = FXCollections.observableArrayList("Add items here");
+	private static ObservableList<String> listTime = FXCollections.observableArrayList("Due Date");
+	
 	
 	public static ObservableList<String> returnList() {
 		return(list);
 	}	
+	public static ObservableList<String> timeList() {
+		return(listTime);
+	}
 	
 	@FXML
 	public void handleButton(ActionEvent event) throws IOException {
@@ -61,10 +68,12 @@ public class MainController implements Initializable{
 	public void removeList(ActionEvent event) {
 	    int selectedItem = assignmentList.getSelectionModel().getSelectedIndex();
 	    list.remove(selectedItem);
+	    listTime.remove(selectedItem);
 	}
 	
 	public void initialize(URL url, ResourceBundle rb) {
 		assignmentList.setItems(list);
+		assignmentTime.setItems(listTime);
 	} 
 	
 	

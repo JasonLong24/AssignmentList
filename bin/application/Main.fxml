@@ -11,13 +11,14 @@
       <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: tan;">
         <items>
           <Button mnemonicParsing="false" onAction="#handleButton" text="Add" />
-            <Button mnemonicParsing="false" onAction="#removeList" text="Delete" />
+          <Button mnemonicParsing="false" onAction="#removeList" text="Delete" />
         </items>
       </ToolBar>
-      <AnchorPane prefWidth="1200.0">
+      <AnchorPane prefWidth="1200.0" style="-fx-background-color: white;">
          <children>
-            <ListView fx:id="assignmentList" layoutX="-1.0" prefHeight="200.0" prefWidth="1200.0" style="-fx-background-color: tan;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <ListView fx:id="assignmentList" prefHeight="200.0" prefWidth="1000.0" style="-fx-background-color: tan;" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0" />
             <Button contentDisplay="GRAPHIC_ONLY" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleButton" opacity="0.0" prefHeight="26.0" prefWidth="1200.0" textFill="#f5d797" />
+            <ListView fx:id="assignmentTime" layoutX="1000.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: tan;" AnchorPane.leftAnchor="1000.0" />
          </children>
       </AnchorPane>
    </children>

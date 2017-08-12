@@ -20,14 +20,18 @@ public class ModalController implements Initializable{
 	@FXML
 	private TextField addItem;
 	@FXML
+	private TextField addTime;
+	@FXML
 	private Button btnBack;
 	@FXML
 	private Button cancelBtn;
 	ObservableList<String> list = MainController.returnList();
+	ObservableList<String> listTime = MainController.timeList();
 	
 	@FXML
 	public void addItem(ActionEvent event) throws IOException{
 		list.add(addItem.getText());
+		listTime.add(addTime.getText());
 		System.out.println("Assignment Added");
 		((Node)(event.getSource())).getScene().getWindow().hide();
 		
