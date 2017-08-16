@@ -10,14 +10,14 @@
 <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: tan;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModalController">
    <children>
       <TextField fx:id="addItem" layoutX="23.0" layoutY="86.0" onAction="#addItem" prefHeight="29.0" prefWidth="92.0" promptText="Add Item" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="149.0" AnchorPane.topAnchor="86.0" />
-      <Text layoutX="80.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add an item" wrappingWidth="103.23779296875" AnchorPane.bottomAnchor="148.2265625" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.76220703125" AnchorPane.topAnchor="33.1484375">
+      <Text layoutX="114.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add" wrappingWidth="35.23779296875" AnchorPane.bottomAnchor="151.2265625" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="30.1484375">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
       <Button fx:id="cancelBtn" layoutX="154.0" layoutY="145.0" mnemonicParsing="false" onAction="#cancelAdd" prefHeight="29.0" prefWidth="84.0" text="Cancel" />
       <Button fx:id="btnBack" layoutX="27.0" layoutY="145.0" mnemonicParsing="false" onAction="#addItem" prefHeight="29.0" prefWidth="84.0" text="Add Item" />
-      <TextField fx:id="addTime" layoutX="150.0" layoutY="86.0" onAction="#addItem" prefHeight="29.0" prefWidth="92.0" promptText="YY/MM/DD" AnchorPane.rightAnchor="22.0" />
+      <TextField fx:id="addTime" layoutX="150.0" layoutY="86.0" onAction="#addItem" prefHeight="29.0" prefWidth="92.0" AnchorPane.rightAnchor="22.0" />
    </children>
    <effect>
       <Blend />
