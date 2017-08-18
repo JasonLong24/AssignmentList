@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.IndexedCell;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
@@ -44,6 +45,12 @@ public class MainController implements Initializable{
 	}	
 	public static ObservableList<String> timeList() {
 		return(listTime);
+	}
+	//Method for the getting ListView index
+	int selectedItem = assignmentList.getSelectionModel().getSelectedIndex();
+	public static int getEdit() {
+		return(selectedItem);
+		//Error: Cannot make a static reference to the non-static field selectedItem
 	}
 	
 	@FXML
@@ -87,9 +94,15 @@ public class MainController implements Initializable{
 	}
 	
 	@FXML
-	public void editList(ActionEvent event) {
-		
+	public void editList(ActionEvent event) throws IOException {
+		Parent editParent = FXMLLoader.load(getClass().getResource("Edit.fxml"));
+		Stage stage = new Stage();
+		stage.setScene(new Scene(editParent));
+		stage.setResizable(false);
+		stage.alwaysOnTopProperty();
+		stage.show();
 	}
+	
 
 	
 	public void initialize(URL url, ResourceBundle rb) {
